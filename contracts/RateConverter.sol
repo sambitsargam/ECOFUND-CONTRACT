@@ -10,9 +10,9 @@ library RateConverter {
     }
 
     /* Return value in cents */
-    function getConversionRate(uint256 ethAmount, AggregatorV3Interface priceFeed) internal view returns (uint256 ethAmountInUSD) {
+    function getConversionRate(uint256 croAmount, AggregatorV3Interface priceFeed) internal view returns (uint256 croAmountInUSD) {
         uint256 ethPrice = getPrice(priceFeed);
-        ethAmountInUSD = (ethPrice * ethAmount) / 1e24;
-        return ethAmountInUSD;
+        croAmountInUSD = (ethPrice * croAmount) / 1e24;
+        return croAmountInUSD;
     }
 }

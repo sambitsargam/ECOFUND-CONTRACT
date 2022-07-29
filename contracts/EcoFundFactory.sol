@@ -33,11 +33,11 @@ contract EcoFundFactory is KeeperCompatibleInterface, Ownable {
     event UserBalanceChanged(address indexed creator, address tokenAddress, uint previousBalance, uint newBalance);
 
 
-    /* Constructor - provide ETH/USD Chainlink price feed address */
-    /* rinkeby: 0x8A753747A1Fa494EC906cE90E9f37563A8AF630e */
-    constructor(/*address _ethUsdPriceFeed*/) {
-        // s_priceFeed = AggregatorV3Interface(_ethUsdPriceFeed);
-        s_priceFeed = AggregatorV3Interface(0x8A753747A1Fa494EC906cE90E9f37563A8AF630e);
+    /* Constructor - provide Xdai/USD Chainlink price feed address */
+    /* cro: 0x00Cb80Cf097D9aA9A3779ad8EE7cF98437eaE050 */
+    constructor(/*address _croUsdPriceFeed*/) {
+        // s_priceFeed = AggregatorV3Interface(_croUsdPriceFeed);
+        s_priceFeed = AggregatorV3Interface(0x00Cb80Cf097D9aA9A3779ad8EE7cF98437eaE050);
         s_lastTimeStamp = block.timestamp;
     }
 
